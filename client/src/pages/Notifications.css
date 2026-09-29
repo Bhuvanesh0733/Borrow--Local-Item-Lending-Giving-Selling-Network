@@ -1,0 +1,31 @@
+/* Notifications — Light Theme */
+.notif-page { padding-top: 88px; padding-bottom: 80px; }
+
+.notif-header {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;
+}
+
+.notif-list { display: flex; flex-direction: column; gap: 6px; }
+
+.notif-item {
+  display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+  cursor: pointer; position: relative; transition: var(--transition);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.notif-item:hover { box-shadow: var(--shadow); border-color: var(--border-strong); }
+.notif-item.unread {
+  border-color: rgba(198,255,0,0.3);
+  background: rgba(198,255,0,0.04);
+}
+
+.notif-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+.notif-body { flex: 1; min-width: 0; }
+.notif-body strong { font-size: 0.88rem; display: block; margin-bottom: 2px; color: var(--text-primary); }
+.notif-body p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.notif-time { font-size: 0.72rem; color: var(--text-muted); }
+
+.unread-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary-dark); flex-shrink: 0; }

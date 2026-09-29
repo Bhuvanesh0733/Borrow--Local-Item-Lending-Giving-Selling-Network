@@ -1,0 +1,41 @@
+/* Requests — Light Theme */
+.requests-page { padding-top: 88px; padding-bottom: 80px; }
+
+.requests-list { display: flex; flex-direction: column; gap: 10px; }
+
+.request-card {
+  display: flex; align-items: center; gap: 16px; padding: 16px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+.request-card:hover { box-shadow: var(--shadow); }
+
+.req-item-img {
+  width: 64px; height: 64px; border-radius: 10px;
+  overflow: hidden; background: var(--bg-subtle); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+  border: 1px solid var(--border);
+}
+.req-item-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.req-info { flex: 1; min-width: 0; }
+.req-item-title {
+  font-weight: 700; font-size: 0.9rem; display: block; margin-bottom: 6px;
+  color: var(--text-primary);
+}
+.req-item-title:hover { color: var(--accent-dark); }
+.req-meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 5px; }
+.req-user { font-size: 0.78rem; color: var(--text-muted); font-style: italic; }
+.req-message { font-size: 0.8rem; color: var(--text-secondary); font-style: italic; margin-bottom: 4px; }
+.req-date { font-size: 0.72rem; color: var(--text-muted); }
+.req-due { font-size: 0.78rem; color: var(--warning); font-weight: 600; }
+
+.req-actions { display: flex; flex-direction: column; gap: 6px; flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .request-card { flex-wrap: wrap; }
+  .req-actions { flex-direction: row; width: 100%; }
+}

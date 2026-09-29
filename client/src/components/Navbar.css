@@ -1,0 +1,125 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 0;
+  transition: var(--transition);
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.navbar-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  height: 64px;
+}
+
+.navbar-logo {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 800; font-size: 1.25rem; color: var(--text-primary);
+  letter-spacing: -0.02em; flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: var(--primary); color: #0D0F14;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; font-weight: 900;
+}
+
+.logo-text { color: var(--text-primary); }
+
+.navbar-links {
+  display: flex; align-items: center; gap: 4px;
+}
+
+.navbar-links a {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 7px 12px;
+  border-radius: var(--radius-xs);
+  transition: var(--transition);
+}
+.navbar-links a:hover { color: var(--text-primary); background: var(--bg-subtle); }
+.navbar-links a.active { color: var(--text-primary); background: var(--bg-subtle); font-weight: 600; }
+
+.navbar-actions {
+  display: flex; align-items: center; gap: 8px;
+}
+
+.notif-btn {
+  position: relative; width: 36px; height: 36px;
+  border-radius: var(--radius-xs); background: var(--bg-subtle);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; transition: var(--transition); color: var(--text-secondary);
+}
+.notif-btn:hover { background: var(--bg-input); color: var(--text-primary); }
+
+.notif-badge {
+  position: absolute; top: -3px; right: -3px;
+  background: var(--danger); color: white;
+  font-size: 0.6rem; font-weight: 700;
+  border-radius: 100px; padding: 1px 4px; min-width: 15px;
+  text-align: center; line-height: 1.4;
+  border: 1.5px solid var(--bg);
+}
+
+.requests-icon-btn {
+  width: 36px; height: 36px; border-radius: var(--radius-xs);
+  background: var(--bg-subtle); display: flex; align-items: center;
+  justify-content: center; font-size: 1rem; transition: var(--transition);
+  color: var(--text-secondary);
+}
+.requests-icon-btn:hover { background: var(--bg-input); color: var(--text-primary); }
+
+.avatar-menu { position: relative; }
+
+.avatar-btn {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--primary); color: #0D0F14;
+  font-weight: 700; font-size: 0.85rem; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid rgba(0,0,0,0.08);
+  transition: var(--transition);
+}
+.avatar-btn:hover { transform: scale(1.05); box-shadow: var(--shadow-primary); }
+.avatar-btn img { width: 100%; height: 100%; object-fit: cover; }
+
+.dropdown {
+  position: absolute; top: calc(100% + 10px); right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  min-width: 170px; overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.dropdown a, .dropdown .logout-btn {
+  display: flex; align-items: center; gap: 10px;
+  padding: 11px 16px; font-size: 0.85rem;
+  color: var(--text-secondary); transition: var(--transition);
+  width: 100%; text-align: left; background: none;
+}
+.dropdown a:hover, .dropdown .logout-btn:hover {
+  background: var(--bg-subtle); color: var(--text-primary);
+}
+.dropdown .logout-btn { color: var(--danger); }
+.dropdown-divider { height: 1px; background: var(--border); margin: 4px 0; }
+
+/* Mobile hamburger */
+.hamburger-btn {
+  display: none;
+  width: 36px; height: 36px; border-radius: var(--radius-xs);
+  background: var(--bg-subtle); flex-direction: column;
+  align-items: center; justify-content: center; gap: 4px;
+}
+.hamburger-btn span {
+  display: block; height: 2px; width: 18px;
+  background: var(--text-secondary); border-radius: 2px;
+  transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+  .navbar-links { display: none; }
+  .hamburger-btn { display: flex; }
+}

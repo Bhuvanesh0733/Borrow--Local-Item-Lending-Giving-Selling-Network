@@ -1,0 +1,74 @@
+/* Profile — Light Theme */
+.profile-page { padding-top: 88px; padding-bottom: 80px; }
+
+.profile-header {
+  display: flex; align-items: center; gap: 24px;
+  padding: 28px; margin-bottom: 32px; flex-wrap: wrap;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-avatar {
+  width: 88px; height: 88px; border-radius: 20px;
+  background: var(--primary); color: #0D0F14;
+  font-size: 2.2rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; flex-shrink: 0;
+  border: 3px solid rgba(198,255,0,0.3);
+  box-shadow: var(--shadow-primary);
+}
+.profile-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.profile-info { flex: 1; }
+.profile-info h1 { font-size: 1.55rem; font-weight: 800; margin-bottom: 6px; color: var(--text-primary); }
+.profile-bio { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 4px; }
+.profile-location { font-size: 0.8rem; color: var(--text-muted); }
+
+.profile-stats { display: flex; gap: 0; border-left: 1px solid var(--border); padding-left: 24px; }
+.profile-stat { text-align: center; padding: 0 20px; border-right: 1px solid var(--border); }
+.profile-stat:last-child { border-right: none; }
+.profile-stat span:first-child { display: block; font-size: 1.6rem; font-weight: 900; color: var(--text-primary); }
+.profile-stat span:last-child { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.profile-section { margin-bottom: 40px; }
+
+/* Rating form */
+.rate-form {
+  padding: 20px; margin-bottom: 24px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; gap: 14px; max-width: 480px;
+}
+.rate-form h3 { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
+
+.star-picker { display: flex; gap: 4px; }
+.star-btn {
+  font-size: 1.8rem; background: none;
+  color: var(--bg-input); transition: var(--transition);
+  filter: grayscale(1);
+}
+.star-btn.active { filter: none; color: var(--secondary); }
+.star-btn:hover { transform: scale(1.15); }
+
+/* Ratings list */
+.ratings-list { display: flex; flex-direction: column; gap: 10px; }
+
+.rating-card {
+  padding: 16px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow-sm);
+}
+
+.rating-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.rating-avatar {
+  width: 30px; height: 30px; border-radius: 8px;
+  background: var(--accent); color: white;
+  font-size: 0.7rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.rating-name { font-weight: 700; font-size: 0.875rem; flex: 1; color: var(--text-primary); }
+.rating-stars { color: var(--secondary); font-size: 0.9rem; }
+.rating-comment { font-size: 0.845rem; color: var(--text-secondary); margin-bottom: 6px; }
+.rating-date { font-size: 0.72rem; color: var(--text-muted); }
